@@ -1,0 +1,10 @@
+{
+  "name": "hackpilot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "npm --prefix frontend install && pip install -r backend/requirements.txt",
+    "start": "npm --prefix frontend run build && cd backend && python -m uvicorn app.main:app --port 8000",
+    "test": "cd backend && python -m pytest -q"
+  }
+}
